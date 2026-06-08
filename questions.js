@@ -3210,6 +3210,107 @@ const questions = [
     ],
     "correct": "abc",
     "year": 2026
+  },
+
+  // === 2026 EXAM QUESTIONS – SET 3 ===
+  {
+    "question": "1. Which statements about training are correct?",
+    "answers": [
+      "Training raises both computational and statistical questions.",
+      "Training can be formulated as solving an ERM problem.",
+      "Training is the same thing as validation.",
+      "Training aims to obtain a learned hypothesis $\\hat{h}$."
+    ],
+    "correct": "abd",
+    "year": 2026
+  },
+  {
+    "question": "S3-2. Which aspects should be compared when evaluating two models trained on the same dataset?",
+    "answers": [
+      "How accurate they are",
+      "Their ability to compile the modeled data.",
+      "Their learned weights for the best model",
+      "How fast they train to reach accuracy 1"
+    ],
+    "correct": "a",
+    "year": 2026
+  },
+  {
+    "question": "6. Which statements correctly distinguish minimizing average loss from Empirical Risk Minimization?",
+    "answers": [
+      "Minimizing average loss emphasizes an optimization viewpoint on a fixed dataset.",
+      "They are always completely different numerical problems.",
+      "ERM emphasizes a statistical learning viewpoint under an i.i.d. assumption.",
+      "They often lead to the same formula."
+    ],
+    "correct": "acd",
+    "year": 2026
+  },
+  {
+    "question": "9. Which representations of uncertainty can be?",
+    "answers": [
+      "Probabilities",
+      "Fuzzy logic",
+      "Dempster-Shafer theory",
+      "Certainty factors and confidence values"
+    ],
+    "correct": "abcd",
+    "year": 2026
+  },
+  {
+    "question": "11. For a network that adds two bits, which input-output pairs are correct if the output is encoded as a decimal sum?",
+    "answers": [
+      "$(1, 1) \\mapsto 2$",
+      "$(0, 1) \\mapsto 1$",
+      "$(0, 0) \\mapsto 0$",
+      "$(1, 0) \\mapsto 1$"
+    ],
+    "correct": "abcd",
+    "year": 2026
+  },
+  {
+    "question": "19. Which statements correctly distinguish Strong AI from Weak AI?",
+    "answers": [
+      "Weak AI necessarily implies that the system uses symbolic reasoning only.",
+      "Strong AI refers to hypothetical systems with general intelligence comparable to human intelligence.",
+      "Strong AI is already achieved by current machine learning systems.",
+      "Weak AI refers to systems designed for specific tasks or narrow problems."
+    ],
+    "correct": "bd",
+    "year": 2026
+  },
+  {
+    "question": "20. Which design decisions must be made for a feedforward network?",
+    "answers": [
+      "Loss function",
+      "Number of neurons in each layer",
+      "Number of layers",
+      "Activation function"
+    ],
+    "correct": "abcd",
+    "year": 2026
+  },
+  {
+    "question": "25. Which statements correctly describe modern data-driven AI?",
+    "answers": [
+      "Its performance may depend on data availability and model capacity.",
+      "Optimization is central to model training.",
+      "It is always deterministic and independent of data.",
+      "Knowledge is often represented implicitly through parameters."
+    ],
+    "correct": "abd",
+    "year": 2026
+  },
+  {
+    "question": "28. Which statements about ReLU are correct?",
+    "answers": [
+      "It provides sparsity because $y = 0$ when $x < 0$.",
+      "It has no vanishing gradient when $x > 0$.",
+      "It is always negative for positive inputs.",
+      "It can be written as $y = \\max(0, x)$."
+    ],
+    "correct": "abd",
+    "year": 2026
   }
 ];
 
