@@ -786,6 +786,281 @@ const questions = [
 
 
   //////////////////////////////////////////////////////
+  // QUESTIONS FROM C01-C03 COURSE MATERIAL
+  //////////////////////////////////////////////////////
+
+  {
+    "question": "Which statement correctly describes the relationship between Artificial Intelligence (AI) and Machine Learning (ML)?",
+    "answers": [
+      "AI and ML are the same field",
+      "ML is a subset of AI; AI also includes rule-based systems, search, and other methods",
+      "AI is a subset of ML",
+      "ML is the only approach used in modern AI systems"
+    ],
+    "correct": "b"
+  },
+  {
+    "question": "Which statements correctly describe Strong AI vs Weak AI?",
+    "answers": [
+      "Strong AI refers to systems that perform specific, narrow tasks without genuine understanding",
+      "Weak AI systems are designed to perform specific tasks without genuine consciousness or reasoning across domains",
+      "Strong AI possesses general intelligence comparable to a human mind, capable of reasoning across domains",
+      "Current AI systems like image classifiers are examples of Strong AI"
+    ],
+    "correct": "bc"
+  },
+  {
+    "question": "The Turing Test was proposed to evaluate:",
+    "answers": [
+      "Whether a machine can solve NP-hard problems in polynomial time",
+      "Whether a machine's conversational behavior is indistinguishable from a human's",
+      "Whether a machine can perform mathematical computations faster than a human",
+      "None of the above"
+    ],
+    "correct": "b"
+  },
+  {
+    "question": "Which of the following are characteristics of Classical AI (Symbolic/Rule-Based AI)?",
+    "answers": [
+      "Knowledge is represented explicitly using rules, logic, and symbols",
+      "Intelligence is achieved through optimization and learning from data",
+      "System behavior is interpretable and deterministic",
+      "Performance depends primarily on the quality of training data"
+    ],
+    "correct": "ac"
+  },
+  {
+    "question": "In machine learning, a model is best described as:",
+    "answers": [
+      "The dataset used for training",
+      "The optimization algorithm used during training",
+      "A parameterized function that maps input features to predictions",
+      "The loss function that quantifies prediction errors"
+    ],
+    "correct": "c"
+  },
+  {
+    "question": "Which of the following is NOT the model in a machine learning system?",
+    "answers": [
+      "A trained neural network with learned weights",
+      "A decision tree learned from data",
+      "The gradient descent optimization algorithm",
+      "A linear regression function with learned parameters"
+    ],
+    "correct": "c"
+  },
+  {
+    "question": "Empirical Risk Minimization (ERM) in machine learning refers to:",
+    "answers": [
+      "Minimizing the expected loss on the true (unknown) data distribution",
+      "Minimizing the average loss computed over the training dataset",
+      "Maximizing the accuracy on the held-out test set",
+      "None of the above"
+    ],
+    "correct": "b"
+  },
+  {
+    "question": "The real goal of a trained machine learning model is to:",
+    "answers": [
+      "Achieve the lowest possible training loss",
+      "Memorize all training examples perfectly",
+      "Generalize well and make accurate predictions on unseen data from the same distribution",
+      "None of the above"
+    ],
+    "correct": "c"
+  },
+  {
+    "question": "Overfitting in machine learning occurs when:",
+    "answers": [
+      "The model performs well on training data but poorly on unseen test data",
+      "The model is too simple to capture the patterns in the training data",
+      "The training loss is too high because the model is under-parameterized",
+      "None of the above"
+    ],
+    "correct": "a"
+  },
+  {
+    "question": "Underfitting in a machine learning model is best characterized by:",
+    "answers": [
+      "Low training loss but high test loss",
+      "The model memorizes the training data without learning general patterns",
+      "The model cannot capture the underlying patterns, resulting in high loss on both training and test data",
+      "None of the above"
+    ],
+    "correct": "c"
+  },
+  {
+    "question": "What is the purpose of a validation set in machine learning?",
+    "answers": [
+      "To train the model parameters using gradient descent",
+      "To evaluate the model during training and tune hyperparameters without touching the test set",
+      "To provide the final unbiased estimate of model performance after training is complete",
+      "To increase the effective size of the training dataset"
+    ],
+    "correct": "b"
+  },
+  {
+    "question": "Stochastic Gradient Descent (SGD) differs from batch gradient descent in that:",
+    "answers": [
+      "SGD computes the gradient using the entire training dataset at each update step",
+      "SGD uses a single randomly selected data point (or small mini-batch) to estimate the gradient at each step",
+      "SGD always converges to the global minimum of the loss function",
+      "SGD does not require a learning rate parameter"
+    ],
+    "correct": "b"
+  },
+  {
+    "question": "In the context of decision trees, entropy measures:",
+    "answers": [
+      "The depth or complexity of the decision tree",
+      "The number of attributes available in the dataset",
+      "The impurity or uncertainty present in a set of examples",
+      "The accuracy of the decision tree on the training data"
+    ],
+    "correct": "c"
+  },
+  {
+    "question": "Information gain in decision tree construction is used to:",
+    "answers": [
+      "Select the attribute that results in the greatest reduction in entropy (impurity) after the split",
+      "Measure the total number of leaves in the resulting tree",
+      "Evaluate the accuracy of a candidate decision rule on the test set",
+      "None of the above"
+    ],
+    "correct": "a"
+  },
+  {
+    "question": "The hyperbolic tangent (tanh) activation function:",
+    "answers": [
+      "Has an output range of (0, 1) like the sigmoid",
+      "Has an output range of (-1, 1) and is zero-centered, unlike sigmoid",
+      "Does not suffer from the vanishing gradient problem",
+      "Is identical to the sigmoid function in behavior"
+    ],
+    "correct": "b"
+  },
+  {
+    "question": "Leaky ReLU was introduced to address which problem of standard ReLU?",
+    "answers": [
+      "The vanishing gradient problem for large positive inputs",
+      "The dying ReLU problem, by allowing a small non-zero gradient when inputs are negative",
+      "The exploding gradient problem in deep networks",
+      "None of the above"
+    ],
+    "correct": "b"
+  },
+  {
+    "question": "In Convolutional Neural Networks, average pooling:",
+    "answers": [
+      "Returns the maximum value from each region covered by the pooling kernel",
+      "Returns the average of all values in each region covered by the pooling kernel",
+      "Adds zero padding to maintain spatial dimensions",
+      "Applies a learned filter to detect local features"
+    ],
+    "correct": "b"
+  },
+  {
+    "question": "Dropout regularization in neural networks works by:",
+    "answers": [
+      "Adding an L2 penalty term to the loss function based on the magnitude of weights",
+      "Randomly deactivating (setting to zero) a fraction of neurons during each training step",
+      "Reducing the learning rate whenever the validation loss plateaus",
+      "None of the above"
+    ],
+    "correct": "b"
+  },
+  {
+    "question": "Which statements about L1 and L2 regularization are correct? (choose all that apply)",
+    "answers": [
+      "L1 regularization tends to produce sparse weight vectors with many zero weights",
+      "L2 regularization penalizes the sum of squared weight values",
+      "Both L1 and L2 add a penalty term to the loss function to discourage large weights",
+      "L2 regularization always guarantees convergence to the global minimum"
+    ],
+    "correct": "abc"
+  },
+  {
+    "question": "Why is initializing all neural network weights to zero problematic?",
+    "answers": [
+      "It leads to slower convergence due to large initial gradients",
+      "All neurons in a layer produce identical outputs and learn identical features (symmetry problem)",
+      "It prevents the use of backpropagation entirely",
+      "None of the above"
+    ],
+    "correct": "b"
+  },
+  {
+    "question": "Which of the following are valid variants of gradient descent? (choose all that apply)",
+    "answers": [
+      "Batch gradient descent — uses the full training set per update",
+      "Stochastic gradient descent — uses one sample per update",
+      "Mini-batch gradient descent — uses a fixed-size subset per update",
+      "Evolutionary gradient descent — uses crossover and mutation"
+    ],
+    "correct": "abc"
+  },
+  {
+    "question": "In a Convolutional Neural Network, increasing the stride of a convolution:",
+    "answers": [
+      "Increases the spatial size of the output feature map",
+      "Has no effect on the spatial dimensions of the output",
+      "Reduces the spatial size of the output feature map",
+      "Increases the number of learnable parameters in the layer"
+    ],
+    "correct": "c"
+  },
+  {
+    "question": "In the context of neural networks, 'depth' refers to:",
+    "answers": [
+      "The total number of neurons across all layers",
+      "The number of hidden layers in the network",
+      "The number of input features fed to the network",
+      "The number of output neurons"
+    ],
+    "correct": "b"
+  },
+  {
+    "question": "Min-max normalization (feature scaling) transforms feature values so that:",
+    "answers": [
+      "All features have a mean of 0 and a standard deviation of 1",
+      "All values fall within a specified range such as [0, 1]",
+      "The data follows a Gaussian (normal) distribution",
+      "None of the above"
+    ],
+    "correct": "b"
+  },
+  {
+    "question": "One-hot encoding is typically used to:",
+    "answers": [
+      "Normalize continuous numerical features to a standard scale",
+      "Represent categorical variables as binary vectors for use in ML models",
+      "Reduce the dimensionality of high-dimensional input features",
+      "None of the above"
+    ],
+    "correct": "b"
+  },
+  {
+    "question": "Which of the following correctly describes Modern AI (Data-Driven / Statistical AI)?",
+    "answers": [
+      "Knowledge is represented explicitly via hand-crafted rules and symbols",
+      "Intelligence is achieved through search, reasoning, and logical inference",
+      "Performance depends on data availability, model capacity, and optimization",
+      "System behavior is always fully interpretable and deterministic"
+    ],
+    "correct": "c"
+  },
+  {
+    "question": "The learning rate in gradient-based optimization:",
+    "answers": [
+      "Determines the number of training epochs",
+      "Controls how large a step is taken in the direction of the negative gradient at each update",
+      "Sets the initial values of the network weights",
+      "Is automatically chosen by the network and cannot be tuned"
+    ],
+    "correct": "b"
+  },
+
+  //////////////////////////////////////////////////////
   // NEW QUESTIONS ADDED
   //////////////////////////////////////////////////////
 
@@ -1320,6 +1595,504 @@ const questions = [
       "Has a vanishing gradient when x>0.",
       "Corrects the problems that occur at sigmoid function.",
       "It is a linear activation function."
+    ],
+    "correct": "c"
+  },
+
+  //////////////////////////////////////////////////////
+  // TRAPS & VARIATIONS
+  //////////////////////////////////////////////////////
+
+  // --- Activation functions ---
+  {
+    "question": "The output range of the sigmoid (logistic) activation function is:",
+    "answers": [
+      "(-∞, +∞)",
+      "(-1, 1)",
+      "(0, 1)",
+      "(-1, 0)"
+    ],
+    "correct": "c"
+  },
+  {
+    "question": "Which is a key difference between the tanh and sigmoid activation functions?",
+    "answers": [
+      "Tanh has range (0, 1) while sigmoid has range (-1, 1)",
+      "Tanh is zero-centered with range (-1, 1), while sigmoid outputs values in (0, 1)",
+      "Tanh does not suffer from the vanishing gradient problem, but sigmoid does",
+      "Tanh can only be used in the output layer while sigmoid can be used in hidden layers"
+    ],
+    "correct": "b"
+  },
+  {
+    "question": "The 'dying ReLU' problem occurs because, for inputs x < 0:",
+    "answers": [
+      "The ReLU output is 1, causing the neuron to always fire",
+      "The ReLU output is undefined for negative inputs",
+      "Both the ReLU output and its derivative are 0, so the neuron never receives a gradient update",
+      "The ReLU derivative is 1, causing exploding gradients"
+    ],
+    "correct": "c"
+  },
+  {
+    "question": "ReLU provides sparsity in a neural network because:",
+    "answers": [
+      "It outputs zero for all positive inputs (x > 0), making many neurons inactive",
+      "It outputs zero for all negative inputs (x ≤ 0), meaning many neurons contribute nothing",
+      "It normalizes activations to have zero mean and unit variance",
+      "It limits the gradient magnitude to avoid exploding gradients"
+    ],
+    "correct": "b"
+  },
+  {
+    "question": "Leaky ReLU solves the dying ReLU problem by:",
+    "answers": [
+      "Capping the output at a fixed maximum value to prevent saturation",
+      "Replacing the zero output for negative inputs with a small non-zero slope (e.g. 0.01·x)",
+      "Adding a bias term that prevents the activation from reaching zero",
+      "Using a stochastic threshold instead of a fixed zero boundary"
+    ],
+    "correct": "b"
+  },
+
+  // --- Loss functions ---
+  {
+    "question": "Compared to L2 loss (MSE), L1 loss (MAE) is:",
+    "answers": [
+      "More sensitive to outliers because it squares the errors",
+      "Less sensitive to outliers because it does not square the errors",
+      "Identical in sensitivity to outliers; only the gradient differs",
+      "Only applicable when the model output is a binary label"
+    ],
+    "correct": "b"
+  },
+  {
+    "question": "MSE (Mean Squared Error) is more sensitive to outliers than MAE (Mean Absolute Error) because:",
+    "answers": [
+      "MSE sums errors while MAE averages them",
+      "MSE requires the outputs to be in the range [0, 1]",
+      "Squaring each error causes large deviations to contribute disproportionately more to the total loss",
+      "MSE is computed over the entire dataset while MAE is computed on a sample"
+    ],
+    "correct": "c"
+  },
+  {
+    "question": "Cross-entropy loss is primarily used for:",
+    "answers": [
+      "Regression tasks where the output is a continuous real value",
+      "Clustering tasks where there are no ground-truth labels",
+      "Classification tasks where the output represents a probability distribution over classes",
+      "Tasks where the model output must be in the range [-1, 1]"
+    ],
+    "correct": "c"
+  },
+  {
+    "question": "For a 10-class problem, the outputs of the softmax layer:",
+    "answers": [
+      "Sum to 10, since each of the 10 outputs represents one class",
+      "Each independently lie in (0, 1) and can sum to any positive value",
+      "Sum to exactly 1.0, forming a valid probability distribution over all classes",
+      "Sum to more than 1 when multiple classes have high confidence"
+    ],
+    "correct": "c"
+  },
+
+  // --- Gradient descent & optimization ---
+  {
+    "question": "Batch gradient descent (standard gradient descent):",
+    "answers": [
+      "Uses a single randomly selected sample to compute the gradient at each update",
+      "Uses a randomly sampled mini-batch of fixed size at each update",
+      "Uses the entire training dataset to compute the gradient at each update step",
+      "Skips the gradient computation and directly adjusts weights based on error signs"
+    ],
+    "correct": "c"
+  },
+  {
+    "question": "Gradient descent applied to a non-convex neural network loss surface:",
+    "answers": [
+      "Always converges to the global minimum",
+      "Is guaranteed to find the optimal weights for any architecture",
+      "Can get trapped in local minima or saddle points and has no global optimality guarantee",
+      "Converges in a fixed number of steps regardless of the learning rate"
+    ],
+    "correct": "c"
+  },
+  {
+    "question": "Momentum in SGD (Stochastic Gradient Descent with momentum):",
+    "answers": [
+      "Increases the learning rate when gradients are consistently large",
+      "Accumulates a moving average of past gradients to accelerate training and dampen oscillations",
+      "Reduces weight values by a fixed fraction at every update step",
+      "Is equivalent to the learning rate but applied only to the bias terms"
+    ],
+    "correct": "b"
+  },
+  {
+    "question": "Weight decay used during neural network training is mathematically equivalent to:",
+    "answers": [
+      "L1 regularization, which adds the sum of absolute weight values to the loss",
+      "Dropout, which randomly zeros activations during training",
+      "L2 regularization, which adds the sum of squared weight values to the loss",
+      "Batch normalization, which re-scales activations within each mini-batch"
+    ],
+    "correct": "c"
+  },
+  {
+    "question": "A model trained using Empirical Risk Minimization (ERM) minimizes loss on:",
+    "answers": [
+      "The true (unknown) data-generating distribution",
+      "The test dataset held out for final evaluation",
+      "The training dataset used during optimization",
+      "The union of training and validation datasets"
+    ],
+    "correct": "c"
+  },
+
+  // --- ANN architecture & weight counting ---
+  {
+    "question": "In an ANN with structure 5 : 10 : 3, how many weights (excluding bias) does each neuron in the HIDDEN layer have?",
+    "answers": [
+      "10",
+      "3",
+      "5",
+      "15"
+    ],
+    "correct": "c"
+  },
+  {
+    "question": "In an ANN with structure 5 : 10 : 3, how many weights (excluding bias) does each neuron in the OUTPUT layer have?",
+    "answers": [
+      "5",
+      "3",
+      "10",
+      "15"
+    ],
+    "correct": "c"
+  },
+  {
+    "question": "A single perceptron with 3 input features has how many total learnable parameters (weights AND one bias)?",
+    "answers": [
+      "3",
+      "4",
+      "2",
+      "6"
+    ],
+    "correct": "b"
+  },
+  {
+    "question": "In a standard feedforward ANN, each neuron in a hidden layer:",
+    "answers": [
+      "Receives inputs from every neuron in the same hidden layer",
+      "Receives inputs from every neuron in the previous layer",
+      "Is connected to exactly one neuron from the previous layer",
+      "Only connects directly to neurons in the output layer"
+    ],
+    "correct": "b"
+  },
+  {
+    "question": "Which statement about deeper neural networks (adding more hidden layers) is FALSE?",
+    "answers": [
+      "Deeper networks can model more complex, hierarchical features",
+      "Deeper networks are more susceptible to the vanishing gradient problem",
+      "Adding more hidden layers always improves generalization on unseen test data",
+      "Deeper networks typically require more careful initialization and regularization"
+    ],
+    "correct": "c"
+  },
+
+  // --- Perceptron & linear separability ---
+  {
+    "question": "A single perceptron using a sigmoid activation function:",
+    "answers": [
+      "Can solve XOR because sigmoid introduces a non-linear decision boundary",
+      "Still can only classify linearly separable patterns, regardless of the activation function used",
+      "Can solve any Boolean function with enough training data",
+      "Can solve XOR if trained with a small enough learning rate"
+    ],
+    "correct": "b"
+  },
+  {
+    "question": "Why can a single-layer perceptron NOT solve the XOR problem?",
+    "answers": [
+      "XOR requires more than two inputs, and the perceptron only handles two",
+      "The XOR function is not linearly separable — no single hyperplane can separate its classes",
+      "The perceptron uses the wrong activation function for Boolean problems",
+      "XOR requires a continuous output, but the perceptron produces binary outputs"
+    ],
+    "correct": "b"
+  },
+
+  // --- Backpropagation ---
+  {
+    "question": "Which statement is TRUE about the backpropagation algorithm?",
+    "answers": [
+      "It guarantees convergence to the global minimum of the loss function",
+      "It can only be applied to networks with a single hidden layer",
+      "It efficiently computes all gradients by applying the chain rule in reverse through the network",
+      "It updates the network architecture (number of neurons) to improve accuracy"
+    ],
+    "correct": "c"
+  },
+  {
+    "question": "Which of the following is NOT a characteristic of the backpropagation algorithm?",
+    "answers": [
+      "It requires the derivative of each activation function to be known",
+      "It propagates error signals from the output layer toward the input layer",
+      "It guarantees finding the globally optimal weights for any network",
+      "It relies on the chain rule of calculus to compute partial derivatives"
+    ],
+    "correct": "c"
+  },
+
+  // --- Regularization & generalization ---
+  {
+    "question": "A model is most likely overfitting when:",
+    "answers": [
+      "Both training loss and test loss are high",
+      "Training loss is high and test loss is low",
+      "Training loss is very low but test loss is significantly higher",
+      "Both training loss and test loss are low and similar in value"
+    ],
+    "correct": "c"
+  },
+  {
+    "question": "The purpose of dropout regularization is to:",
+    "answers": [
+      "Speed up forward pass computation by skipping neurons",
+      "Reduce overfitting by forcing the network to learn redundant representations across different subsets of neurons",
+      "Increase model capacity by adding effective neurons during training",
+      "Normalize the output distribution of each layer"
+    ],
+    "correct": "b"
+  },
+  {
+    "question": "During inference (test time), dropout in a neural network:",
+    "answers": [
+      "Is applied at the same dropout rate as during training for consistency",
+      "Is disabled; all neurons are active and weights are typically scaled accordingly",
+      "Is increased to reduce overfitting on unseen examples",
+      "Only affects neurons in the output layer"
+    ],
+    "correct": "b"
+  },
+  {
+    "question": "Adding more training data will always improve model accuracy.",
+    "answers": [
+      "True — more data always leads to a better model",
+      "False — noisy, mislabeled, or non-representative data can hurt performance"
+    ],
+    "correct": "b"
+  },
+  {
+    "question": "L1 regularization (Lasso) has a practical advantage over L2 (Ridge) because:",
+    "answers": [
+      "L1 always achieves lower training loss than L2",
+      "L1 drives many weight values to exactly zero, enabling automatic feature selection",
+      "L1 completely prevents overfitting on any dataset",
+      "L1 is computationally cheaper because it avoids any squaring operations"
+    ],
+    "correct": "b"
+  },
+
+  // --- Train / val / test splits ---
+  {
+    "question": "The final, unbiased estimate of model performance should be computed on:",
+    "answers": [
+      "The training set, since we know the model predictions on it are reliable",
+      "The validation set used to tune hyperparameters",
+      "The test set, which the model has never seen during training or hyperparameter tuning",
+      "A combination of training and validation sets for maximum data usage"
+    ],
+    "correct": "c"
+  },
+  {
+    "question": "Why should hyperparameter tuning NOT be performed directly on the test set?",
+    "answers": [
+      "The test set is too small to give reliable accuracy estimates",
+      "Using the test set for tuning causes information leakage, making the final reported accuracy optimistically biased",
+      "Test set evaluation is computationally too expensive to run repeatedly",
+      "The test set does not contain labels in standard ML workflows"
+    ],
+    "correct": "b"
+  },
+  {
+    "question": "What distinguishes a hyperparameter from a model parameter?",
+    "answers": [
+      "Hyperparameters are learned from data; model parameters are set manually before training",
+      "Model parameters are learned from data during training; hyperparameters are set before training and are not learned",
+      "There is no difference — both terms refer to the weights and biases of a neural network",
+      "Hyperparameters control the network structure only; model parameters control the loss function"
+    ],
+    "correct": "b"
+  },
+  {
+    "question": "Which of the following are HYPERPARAMETERS (not learned from data during training)? (choose all correct)",
+    "answers": [
+      "The learning rate of gradient descent",
+      "The weight values of a trained neural network",
+      "The number of hidden layers in the network",
+      "The bias values of each neuron after training"
+    ],
+    "correct": "ac"
+  },
+
+  // --- Metrics ---
+  {
+    "question": "The F1 score is the _____ of precision and recall.",
+    "answers": [
+      "arithmetic mean",
+      "geometric mean",
+      "harmonic mean",
+      "weighted sum"
+    ],
+    "correct": "c"
+  },
+  {
+    "question": "Precision in a binary classifier is defined as:",
+    "answers": [
+      "TP / (TP + FN) — fraction of actual positives correctly identified",
+      "TP / (TP + FP) — fraction of predicted positives that are truly positive",
+      "TN / (TN + FP) — fraction of actual negatives correctly rejected",
+      "TN / (TN + FN) — fraction of predicted negatives that are truly negative"
+    ],
+    "correct": "b"
+  },
+  {
+    "question": "Recall (sensitivity / true positive rate) is defined as:",
+    "answers": [
+      "TP / (TP + FP) — fraction of predicted positives that are truly positive",
+      "TN / (TN + FP) — fraction of negatives correctly identified",
+      "TP / (TP + FN) — fraction of actual positives correctly identified",
+      "FP / (FP + TN) — the false positive rate"
+    ],
+    "correct": "c"
+  },
+  {
+    "question": "A 'False Negative' (FN) in binary classification occurs when:",
+    "answers": [
+      "The model predicts positive and the true label is positive",
+      "The model predicts negative and the true label is negative",
+      "The model predicts positive and the true label is negative",
+      "The model predicts negative but the true label is positive"
+    ],
+    "correct": "d"
+  },
+  {
+    "question": "A 'False Positive' (FP) in binary classification occurs when:",
+    "answers": [
+      "The model predicts negative and the true label is negative",
+      "The model predicts positive and the true label is positive",
+      "The model predicts positive but the true label is negative",
+      "The model predicts negative but the true label is positive"
+    ],
+    "correct": "c"
+  },
+
+  // --- Decision trees ---
+  {
+    "question": "The information gain ratio in decision trees was introduced to:",
+    "answers": [
+      "Increase the preference for attributes with many distinct values",
+      "Replace entropy with the Gini impurity measure",
+      "Reduce the bias towards attributes with many distinct values by normalizing information gain by the split information",
+      "Guarantee that the resulting tree has the minimum number of leaves"
+    ],
+    "correct": "c"
+  },
+
+  // --- ConvNets ---
+  {
+    "question": "In a Convolutional Neural Network, the filter (kernel) weights are:",
+    "answers": [
+      "Always hand-crafted by the engineer prior to training",
+      "Fixed using standard image-processing filters such as Sobel or Gaussian",
+      "Learned automatically during training via backpropagation",
+      "Randomly initialized and never updated throughout training"
+    ],
+    "correct": "c"
+  },
+
+  // --- PSO / ACO / GA distinctions ---
+  {
+    "question": "Which feature belongs to Particle Swarm Optimisation (PSO) but NOT to Ant Colony Optimisation (ACO)?",
+    "answers": [
+      "Pheromone trails that influence the probability of choosing a path",
+      "Constructive search operators that build solutions step by step",
+      "Particle velocity and personal-best position memory",
+      "A pheromone evaporation mechanism to avoid premature convergence"
+    ],
+    "correct": "c"
+  },
+  {
+    "question": "ACO and PSO are both nature-inspired algorithms. Which statement correctly distinguishes them?",
+    "answers": [
+      "Both use pheromone trails to guide the search",
+      "ACO builds solutions constructively guided by pheromones; PSO moves particles through a continuous space using velocity",
+      "PSO uses pheromone trails while ACO uses particle velocities",
+      "They are identical in mechanism but differ only in the problems they are applied to"
+    ],
+    "correct": "b"
+  },
+  {
+    "question": "In a Genetic Algorithm, the crossover operator:",
+    "answers": [
+      "Randomly changes individual bits of a solution to introduce diversity",
+      "Guides the population toward the globally best individual found so far",
+      "Combines parts of two parent solutions to produce one or more offspring",
+      "Evaluates each individual's quality using the fitness function"
+    ],
+    "correct": "c"
+  },
+  {
+    "question": "In a Genetic Algorithm, the mutation operator:",
+    "answers": [
+      "Combines parts of two parent chromosomes to create offspring",
+      "Selects the best individuals to survive to the next generation",
+      "Makes small random changes to an individual to maintain diversity and prevent premature convergence",
+      "Evaluates the fitness of each candidate solution"
+    ],
+    "correct": "c"
+  },
+
+  // --- Misc traps ---
+  {
+    "question": "Which statement about Strong AI is correct?",
+    "answers": [
+      "Strong AI exists today in the form of large language models that reason across all domains",
+      "Strong AI is a hypothetical form of AI with general human-like reasoning; no such system currently exists",
+      "Strong AI is another name for deep learning, which uses many hidden layers",
+      "Strong AI refers to AI systems that run on specialized GPU hardware"
+    ],
+    "correct": "b"
+  },
+  {
+    "question": "The model in a machine learning system is best described as — choose the MOST precise answer:",
+    "answers": [
+      "The optimization algorithm (e.g., gradient descent) used to fit the parameters",
+      "The training dataset used to compute the loss",
+      "The loss function that measures prediction errors during training",
+      "The parameterized function learned during training that is deployed to make predictions"
+    ],
+    "correct": "d"
+  },
+  {
+    "question": "The role of the bias term in an artificial neuron is to:",
+    "answers": [
+      "Scale the weighted sum of inputs before applying the activation function",
+      "Determine the learning rate for weight updates during backpropagation",
+      "Shift the activation function threshold so the neuron can fire even when all inputs are zero",
+      "Connect the neuron to the previous layer's outputs via a weighted link"
+    ],
+    "correct": "c"
+  },
+  {
+    "question": "In the PSO velocity update v = w·v + c1·r1·(pbest − x) + c2·r2·(gbest − x), the term c1 is called the:",
+    "answers": [
+      "Social coefficient — pulling the particle toward the global best position",
+      "Inertia weight — controlling the balance between exploration and exploitation",
+      "Cognitive coefficient — pulling the particle toward its own personal best position",
+      "Stochastic coefficient — introducing randomness into the velocity update"
     ],
     "correct": "c"
   },

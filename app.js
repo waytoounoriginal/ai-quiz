@@ -223,7 +223,14 @@ function restoreDashboard() {
                     <p>Practice questions you got wrong in your last session</p>
                     <button class="card-btn">Start Review</button>
                 </div>
-                
+
+                <div class="dashboard-card quinary" onclick="showCustomTestDialog()">
+                    <div class="card-icon">🎲</div>
+                    <h3>Custom Test</h3>
+                    <p>Generate a test with a specific number of random questions</p>
+                    <button class="card-btn">Set Questions</button>
+                </div>
+
                 <div class="dashboard-card tertiary" onclick="showHistory()">
                     <div class="card-icon">📊</div>
                     <h3>Session History</h3>
@@ -374,7 +381,7 @@ function saveUserNameAndStart() {
     beginSession();
 }
 
-function beginSession() {
+function beginSession(questionCount = null) {
     // Reset quiz state
     currentQuestion = 0;
     correctAnswers = 0;
@@ -384,8 +391,11 @@ function beginSession() {
     sessionStartTime = Date.now();
     isReviewMode = false;
 
-    // Load all questions
-    currentQuestions = QuizUtils.shuffleArray([...window.questions]);
+    // Shuffle all questions, then optionally limit to questionCount
+    const shuffled = QuizUtils.shuffleArray([...window.questions]);
+    currentQuestions = (questionCount && questionCount < shuffled.length)
+        ? shuffled.slice(0, questionCount)
+        : shuffled;
 
     // Show quiz view
     DOMUtils.showView('quiz');
@@ -435,6 +445,75 @@ function startReviewSession() {
     displayQuestion();
     updateStats();
     notificationManager.success(`Review mode started! Practicing ${currentQuestions.length} questions you missed.`);
+}
+
+function showCustomTestDialog() {
+    const savedUserName = localStorage.getItem('aiQuizUserName');
+    if (!savedUserName) {
+        showUserNameDialog();
+        return;
+    }
+
+    DOMUtils.showView('dashboard');
+    const dashboard = document.getElementById('dashboard');
+    const total = window.questions.length;
+    const defaultN = Math.min(20, total);
+
+    dashboard.innerHTML = `
+        <div class="quiz-container">
+            <div class="user-name-dialog">
+                <h2>🎲 Custom Test</h2>
+                <p>Choose how many questions you want in your test.</p>
+                <p style="color:#64748b;font-size:0.9rem;margin-top:4px;">Total available: <strong>${total}</strong> questions</p>
+
+                <div class="name-input-section">
+                    <label for="questionCountInput" style="display:block;margin-bottom:8px;font-weight:600;color:#1e293b;">
+                        Number of questions:
+                    </label>
+                    <input
+                        type="number"
+                        id="questionCountInput"
+                        value="${defaultN}"
+                        min="1"
+                        max="${total}"
+                        style="width:100%;padding:12px;border:2px solid #e2e8f0;border-radius:8px;font-size:1rem;"
+                    />
+                    <div class="name-requirements">
+                        <small>• Enter a number between 1 and ${total}</small>
+                    </div>
+                </div>
+
+                <div class="dialog-actions">
+                    <button onclick="confirmCustomTest()" class="btn-primary" id="confirmCustomBtn">
+                        Start Custom Test
+                    </button>
+                    <button onclick="showDashboard()" class="btn-secondary">
+                        Back to Dashboard
+                    </button>
+                </div>
+            </div>
+        </div>
+    `;
+
+    const input = document.getElementById('questionCountInput');
+    input.focus();
+    input.select();
+    input.addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') confirmCustomTest();
+    });
+}
+
+function confirmCustomTest() {
+    const input = document.getElementById('questionCountInput');
+    const n = parseInt(input.value, 10);
+    const total = window.questions.length;
+
+    if (isNaN(n) || n < 1 || n > total) {
+        notificationManager.error(`Please enter a number between 1 and ${total}`);
+        return;
+    }
+
+    beginSession(n);
 }
 
 function showHistory() {
@@ -1267,6 +1346,8 @@ window.showDashboard = showDashboard;
 window.showLearning = showLearning;
 window.startNewSession = startNewSession;
 window.startReviewSession = startReviewSession;
+window.showCustomTestDialog = showCustomTestDialog;
+window.confirmCustomTest = confirmCustomTest;
 window.showHistory = showHistory;
 window.hideHistory = hideHistory;
 window.submitAnswer = submitAnswer;

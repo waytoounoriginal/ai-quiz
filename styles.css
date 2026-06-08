@@ -146,6 +146,10 @@ body {
     border-top: 4px solid #7c3aed;
 }
 
+.dashboard-card.quinary {
+    border-top: 4px solid #0891b2;
+}
+
 .dashboard-card.rankings {
     border-top: 4px solid #f59e0b;
     background: linear-gradient(135deg, #fef3c7 0%, #fbbf24 100%);
