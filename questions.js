@@ -2702,6 +2702,514 @@ const questions = [
     ],
     "correct": "acd",
     "year": 2026
+  },
+
+  // === 2026 EXAM QUESTIONS – SET 2 ===
+
+  {
+    "question": "S2-1. Which tasks are examples of sequence problems mentioned in the lecture?",
+    "answers": [
+      "DNA sequences",
+      "Sensor streams",
+      "Text",
+      "Speech"
+    ],
+    "correct": "abcd",
+    "year": 2026
+  },
+  {
+    "question": "S2-2. Why do LSTMs learn long-term dependencies better than plain RNNs?",
+    "answers": [
+      "Important signals can persist across many time steps.",
+      "Cell-state updates are partly additive rather than fully multiplicative.",
+      "Gates provide data-dependent control over memory retention.",
+      "They remove the need for any optimization."
+    ],
+    "correct": "abc",
+    "year": 2026
+  },
+  {
+    "question": "S2-3. For MinMaxScaler with feature range $(min, max)$, which formulas or statements are correct?",
+    "answers": [
+      "$X_{std} = \\frac{X - X.min}{X.max - X.min}$.",
+      "$X_{scaled} = X_{std}(max - min) + min$.",
+      "The scaler should be fitted separately on each test sample.",
+      "The transformation should be fitted on the test data."
+    ],
+    "correct": "ab",
+    "year": 2026
+  },
+  {
+    "question": "S2-4. Why were LSTMs introduced?",
+    "answers": [
+      "To preserve information for longer periods.",
+      "To remove sequence modeling entirely.",
+      "To use gates that control memory.",
+      "To introduce a dedicated cell state."
+    ],
+    "correct": "acd",
+    "year": 2026
+  },
+  {
+    "question": "S2-5. Which statements about traditional ANNs and generic transforms are correct?",
+    "answers": [
+      "Generic transforms may map data to a higher-dimensional space.",
+      "Manual engineering can require domain-specific human effort.",
+      "Generic transforms always guarantee perfect generalization.",
+      "RBF kernels are mentioned as an example of kernel methods."
+    ],
+    "correct": "abd",
+    "year": 2026
+  },
+  {
+    "question": "S2-6. Which statements about fitness sharing are correct?",
+    "answers": [
+      "It uses a sharing function based on distance.",
+      "It is sensitive to the sharing radius $\\sigma_{share}$.",
+      "It reduces the reward of individuals in crowded areas.",
+      "It is sensitive to the distance metric."
+    ],
+    "correct": "abcd",
+    "year": 2026
+  },
+  {
+    "question": "S2-7. Given $x = (1, 2)^T$, $W = [[2, 1], [0, 1]]$, and $b = (1, -1)^T$, which statements are correct for $y = Wx + b$?",
+    "answers": [
+      "The dot product <x, y> is 7.",
+      "The Euclidean norm of $x$ is 5.",
+      "$y = (5, 1)^T$.",
+      "$Wx = (4, 2)^T$."
+    ],
+    "correct": "acd",
+    "year": 2026
+  },
+  {
+    "question": "S2-8. Which equations correctly describe perceptron-based separation in the lecture?",
+    "answers": [
+      "For $m > 3$, a hyperplane can be written using a weighted sum of features.",
+      "For $m = 2$, a line can be written as $w_1x_1 + w_2x_2 + \\theta = 0$.",
+      "A perceptron always separates data using a circle.",
+      "For $m = 3$, a plane can be written as $w_1x_1 + w_2x_2 + w_3x_3 + \\theta = 0$."
+    ],
+    "correct": "abd",
+    "year": 2026
+  },
+  {
+    "question": "S2-9. Which statements about batching sequence data in PyTorch are correct?",
+    "answers": [
+      "With `batch_first = True`, the batch dimension comes first.",
+      "Batching allows several sequences to be processed in parallel.",
+      "Batching requires every model to ignore sequence length.",
+      "Batches can improve computational efficiency during training."
+    ],
+    "correct": "abd",
+    "year": 2026
+  },
+  {
+    "question": "S2-10. Consider a $3 \\times 3$ input matrix $X$ and a $2 \\times 2$ filter $F$ used in a valid cross-correlation operation. Which statements are correct?",
+    "answers": [
+      "$H_{out} = W_{out} = 3$.",
+      "$H_{out} = \\lfloor \\frac{5 - 3 + 0}{1} \\rfloor + 1$.",
+      "The output size is $3 \\times 3$.",
+      "The output size is $5 \\times 5$ without padding."
+    ],
+    "correct": "abc",
+    "year": 2026
+  },
+  {
+    "question": "S2-11. Which statements correctly distinguish minimizing average loss from Empirical Risk Minimization?",
+    "answers": [
+      "ERM emphasizes a statistical learning viewpoint under an i.i.d. assumption.",
+      "They are always completely different numerical problems.",
+      "Minimizing average loss emphasizes an optimization problem."
+    ],
+    "correct": "ac",
+    "year": 2026
+  },
+  {
+    "question": "S2-12. For Sugeno inference with firing strengths $\\alpha_i$ and crisp consequents $z_i = f_i(x,y)$, which statements are correct?",
+    "answers": [
+      "The denominator is always ignored.",
+      "The computation is a weighted average.",
+      "Rules with higher firing strength influence the final output more.",
+      "The output can be computed as $z^* = \\frac{\\sum \\alpha_i z_i}{\\sum \\alpha_i}$."
+    ],
+    "correct": "bcd",
+    "year": 2026
+  },
+  {
+    "question": "S2-13. Which statements correctly describe the real goal of a Machine Learning model?",
+    "answers": [
+      "The goal can be expressed as minimizing an expected loss.",
+      "Low training loss always guarantees low test loss.",
+      "The distribution $p(x, y)$ is typically unknown.",
+      "The goal is to perform well on unseen future data."
+    ],
+    "correct": "acd",
+    "year": 2026
+  },
+  {
+    "question": "S2-14. Which are main characteristics of evolutionary algorithms mentioned in the lecture?",
+    "answers": [
+      "Iterative processes",
+      "Random search components",
+      "Exact symbolic proof of optimality at every generation",
+      "Parallel population-based search"
+    ],
+    "correct": "abd",
+    "year": 2026
+  },
+  {
+    "question": "S2-15. Which formulas are correct for Softplus and Swish as presented in the lecture?",
+    "answers": [
+      "Swish is defined as $y = \\max(0, x)$.",
+      "Softplus always outputs values in $(0, +\\infty)$.",
+      "Softplus: $y = \\log(1 + e^x)$.",
+      "Swish: $y = x \\cdot \\text{sigmoid}(x)$."
+    ],
+    "correct": "bcd",
+    "year": 2026
+  },
+  {
+    "question": "S2-16. Which statements correctly compare clipped and scaled Mamdani consequents?",
+    "answers": [
+      "Clipping is easy to compute but may lose shape information.",
+      "Scaling preserves more shape information but is more computationally demanding.",
+      "Clipping cuts the output membership function at the firing-strength level.",
+      "Scaling multiplies the output membership function by the firing strength."
+    ],
+    "correct": "abcd",
+    "year": 2026
+  },
+  {
+    "question": "S2-17. Which niching methods are mentioned?",
+    "answers": [
+      "Fitness sharing",
+      "Crowding",
+      "Speciation",
+      "Clearing and island models"
+    ],
+    "correct": "abcd",
+    "year": 2026
+  },
+  {
+    "question": "S2-18. Which statements about information gain are correct?",
+    "answers": [
+      "Information gain measures how eliminating or splitting by attribute $a$ reduces dataset entropy.",
+      "$Gain(S, a) = E(S) - \\sum_{v \\in values(a)} \\frac{|S_v|}{|S|} E(S_v)$.",
+      "Information gain is always computed without using class proportions.",
+      "The second term is expected information after splitting by the attribute."
+    ],
+    "correct": "abd",
+    "year": 2026
+  },
+  {
+    "question": "S2-19. Which statements correctly compare Mamdani, Sugeno, and Tsukamoto models?",
+    "answers": [
+      "Sugeno produces crisp rule outputs.",
+      "Mamdani produces fuzzy output regions.",
+      "Tsukamoto uses monotone consequent fuzzy sets and produces crisp values per rule.",
+      "All three models use exactly the same consequent representation."
+    ],
+    "correct": "abc",
+    "year": 2026
+  },
+  {
+    "question": "S2-20. Which data subsets are explicitly included in the training database discussion?",
+    "answers": [
+      "Training data",
+      "Test data",
+      "Only unlabeled pictures with no task",
+      "A possible 80% training and 20% testing split"
+    ],
+    "correct": "abd",
+    "year": 2026
+  },
+  {
+    "question": "S2-21. Which of the following functions can be used as activation functions?",
+    "answers": [
+      "Gaussian function",
+      "Constant function",
+      "Sigmoid function",
+      "Step function"
+    ],
+    "correct": "abcd",
+    "year": 2026
+  },
+  {
+    "question": "S2-22. For max pooling over an $N \\times N$ region, which statement about backpropagation is correct?",
+    "answers": [
+      "The maximum position from the forward pass matters.",
+      "The gradient is equally distributed to all inputs regardless of their values.",
+      "The gradient is passed only to the input element that achieved the maximum value in the forward pass.",
+      "Max pooling has no effect on gradient flow."
+    ],
+    "correct": "ac",
+    "year": 2026
+  },
+  {
+    "question": "S2-23. Which statements about the filters shown in the lecture are correct?",
+    "answers": [
+      "Combining multiple feature maps can detect richer image structure.",
+      "A Sobel-like filter can detect vertical edges.",
+      "Different filters respond to different visual patterns.",
+      "A horizontal line detector responds to horizontal patterns."
+    ],
+    "correct": "abcd",
+    "year": 2026
+  },
+  {
+    "question": "S2-24. Consider a $3 \\times 3$ input matrix $X$ and a $2 \\times 2$ filter $F$ used in a valid cross-correlation. Which expressions are correct for $\\frac{\\partial E}{\\partial F_{1,1}}$?",
+    "answers": [
+      "It depends on the upstream gradient $\\frac{\\partial E}{\\partial O}$.",
+      "It depends on the input values covered by $F_{1,1}$.",
+      "It is always equal to zero.",
+      "$\\frac{\\partial E}{\\partial O_{1,1}}x_{1,1} + \\frac{\\partial E}{\\partial O_{1,2}}x_{1,2} + \\frac{\\partial E}{\\partial O_{2,1}}x_{2,1} + \\frac{\\partial E}{\\partial O_{2,2}}x_{2,2}$."
+    ],
+    "correct": "abd",
+    "year": 2026
+  },
+  {
+    "question": "S2-25. Which are common modelling errors listed in the lecture?",
+    "answers": [
+      "Optimizing the wrong objective.",
+      "Ignoring scale differences between objectives or constraints.",
+      "Using an encoding that generates mostly infeasible candidates.",
+      "Reporting one run without measuring stochastic variability."
+    ],
+    "correct": "abcd",
+    "year": 2026
+  },
+  {
+    "question": "S2-26. Which statements about SPEA2 are correct?",
+    "answers": [
+      "Strength $S(i)$ counts how many solutions $i$ dominates.",
+      "It uses an external archive.",
+      "Final fitness includes a density estimate $D(i)$.",
+      "Raw fitness $R(i)$ sums strengths of solutions that dominate $i$."
+    ],
+    "correct": "abcd",
+    "year": 2026
+  },
+  {
+    "question": "S2-27. Which statements about the F1 Score are correct?",
+    "answers": [
+      "Its range is $[0, 1]$ according to the lecture.",
+      "It can be written as $F1 = 2 \\cdot \\frac{1}{\\frac{1}{Prec} + \\frac{1}{Recall}}$.",
+      "It is the harmonic mean between precision and recall.",
+      "It ignores both precision and recall."
+    ],
+    "correct": "abc",
+    "year": 2026
+  },
+  {
+    "question": "S2-28. For a network with two inputs and two hidden units, which hidden-layer expressions are correct?",
+    "answers": [
+      "It is computed without any activation function.",
+      "$o = f(net^H)$.",
+      "$net^H_1 = (W^H_1)^T X = w^H_{11}x_1 + w^H_{12}x_2$.",
+      "$net^H_2 = (W^H_2)^T X = w^H_{21}x_1 + w^H_{22}x_2$."
+    ],
+    "correct": "bcd",
+    "year": 2026
+  },
+  {
+    "question": "S2-30. Which statements about the ReLU activation and its gradient are correct?",
+    "answers": [
+      "Its gradient is 0 for negative inputs.",
+      "ReLU can be written as $f(x) = \\max(0, x)$.",
+      "It is smooth and differentiable at $x=0$ in the classical sense.",
+      "Its gradient is 1 for positive inputs."
+    ],
+    "correct": "abd",
+    "year": 2026
+  },
+  {
+    "question": "S2-31. Which statements about linearity and non-linearity are correct?",
+    "answers": [
+      "A nonlinear transform $\\phi(x)$ can be used in $f(x) = W^T \\phi(x)$.",
+      "Nonlinear transformations are never used in neural networks.",
+      "Linear models have limited model capacity.",
+      "Linear models can be fit efficiently via convex optimization."
+    ],
+    "correct": "acd",
+    "year": 2026
+  },
+  {
+    "question": "S2-32. Which concepts are associated with classical AI?",
+    "answers": [
+      "Symbols",
+      "Gradient descent as the only reasoning mechanism",
+      "Rules",
+      "Logic"
+    ],
+    "correct": "acd",
+    "year": 2026
+  },
+  {
+    "question": "S2-33. Which fuzzy-logic operations are given in the lecture?",
+    "answers": [
+      "$a \\wedge b = \\min(a, b)$",
+      "$\\sim a = 1 - a$",
+      "$a \\vee b = \\max(a, b)$",
+      "$a \\wedge b = a + b$ always"
+    ],
+    "correct": "abc",
+    "year": 2026
+  },
+  {
+    "question": "S2-34. Which recombination types are listed in the lecture?",
+    "answers": [
+      "Uniform crossover for binary or integer representation",
+      "Order crossover for permutation representation",
+      "Arithmetic crossover for real representation",
+      "N-cutting point crossover for binary or integer representation"
+    ],
+    "correct": "abcd",
+    "year": 2026
+  },
+  {
+    "question": "S2-35. For training a fully connected network in PyTorch, which components are generally needed?",
+    "answers": [
+      "A loss criterion comparing predictions with targets.",
+      "A database $\\mathcal{D} = \\{(x_i, y_i) | i \\in \\{1, \\dots, n\\}\\}$.",
+      "An optimizer that updates parameters.",
+      "A training loop that repeatedly performs forward and update steps."
+    ],
+    "correct": "abcd",
+    "year": 2026
+  },
+  {
+    "question": "S2-37. Which distances or similarity measures are mentioned for unsupervised learning?",
+    "answers": [
+      "Manhattan distance",
+      "Cosine similarity",
+      "Euclidean distance",
+      "Levenshtein distance"
+    ],
+    "correct": "abcd",
+    "year": 2026
+  },
+  {
+    "question": "S2-38. Which statements correctly describe learning-algorithm evaluation?",
+    "answers": [
+      "Evaluation should ignore accuracy, training time, and testing time.",
+      "Experimental evaluation may compare methods on different data.",
+      "Theoretical evaluation may analyze computational complexity.",
+      "Cross-validation can be used in experimental evaluation."
+    ],
+    "correct": "bcd",
+    "year": 2026
+  },
+  {
+    "question": "S2-39. Which statements about ResNet bottleneck blocks are correct?",
+    "answers": [
+      "The middle layer processes features.",
+      "A bottleneck block uses $1 \\times 1$, $3 \\times 3$, and $1 \\times 1$ convolutions.",
+      "The first layer reduces channels.",
+      "The last layer restores dimension."
+    ],
+    "correct": "abcd",
+    "year": 2026
+  },
+  {
+    "question": "S2-40. Which statements about backpropagation are correct?",
+    "answers": [
+      "It requires activation-function derivatives to be known at network design time.",
+      "It is a gradient descent method.",
+      "It is used for fine-tuning ANN weights.",
+      "It is not guaranteed to find the global minimum of the error function."
+    ],
+    "correct": "abcd",
+    "year": 2026
+  },
+  {
+    "question": "S2-41. Which statements correctly describe a model in Machine Learning?",
+    "answers": [
+      "A model maps features to predictions.",
+      "A model is exactly the same thing as the training dataset.",
+      "A model is the object used to make predictions after training.",
+      "A model is usually a parameterized function."
+    ],
+    "correct": "acd",
+    "year": 2026
+  },
+  {
+    "question": "S2-42. Which are problem-side components of an optimization model?",
+    "answers": [
+      "Objective functions",
+      "Decision variables",
+      "Constraints and feasible region",
+      "Mutation probability only"
+    ],
+    "correct": "abc",
+    "year": 2026
+  },
+  {
+    "question": "S2-44. Which elements are part of evolutionary algorithm design?",
+    "answers": [
+      "Chromosome representation",
+      "Genetic operators",
+      "Population model",
+      "Fitness function"
+    ],
+    "correct": "abcd",
+    "year": 2026
+  },
+  {
+    "question": "S2-45. Which node types are included in the decision-tree definition from the lecture?",
+    "answers": [
+      "Gradient nodes",
+      "Decision nodes",
+      "Hazard nodes",
+      "Result nodes"
+    ],
+    "correct": "bd",
+    "year": 2026
+  },
+  {
+    "question": "S2-46. For a dataset $\\mathcal{D} = \\{(x^{(1)}, y^{(1)}), \\dots, (x^{(m)}, y^{(m)})\\}$, which statements about ERM are correct?",
+    "answers": [
+      "ERM requires knowing the true distribution $p(x,y)$ exactly.",
+      "ERM is used because the expected risk is usually not directly computable.",
+      "ERM minimizes an average loss over the training dataset.",
+      "ERM can be written as $\\hat{h} \\in \\arg\\min_{h \\in \\mathcal{H}} \\frac{1}{m} \\sum_{i=1}^m L(h(x^{(i)}), y^{(i)})$."
+    ],
+    "correct": "bcd",
+    "year": 2026
+  },
+  {
+    "question": "S2-47. Which statements about neuron processing are correct?",
+    "answers": [
+      "The neuron computes a weighted sum $net = \\sum_{i=1}^n w_i x_i$.",
+      "The activation function processes the net input.",
+      "Weights are irrelevant to neuron computation.",
+      "The output can be written as $o = f(net)$."
+    ],
+    "correct": "abd",
+    "year": 2026
+  },
+  {
+    "question": "S2-48. Which statements correctly explain why AI systems should not be treated as 'thinking' systems?",
+    "answers": [
+      "If a system produces language, it necessarily understands meaning like a human.",
+      "Probabilistic outputs are not equivalent to genuine understanding.",
+      "Their behavior is produced by formal models and computation.",
+      "Optimization and parameter updates do not imply consciousness."
+    ],
+    "correct": "bcd",
+    "year": 2026
+  },
+  {
+    "question": "S2-49. Which statements correctly compare the perceptron algorithm with the gradient descent algorithm?",
+    "answers": [
+      "Perceptron convergence is finite only under perfect separation conditions.",
+      "The perceptron output is discrete and threshold-based.",
+      "Gradient descent may use continuous outputs such as $o^d = wx^d$ or $o^d = sig(wx^d)$.",
+      "Gradient descent is never asymptotic."
+    ],
+    "correct": "abc",
+    "year": 2026
   }
 ];
 
