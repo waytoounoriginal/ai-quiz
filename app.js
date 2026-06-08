@@ -231,6 +231,13 @@ function restoreDashboard() {
                     <button class="card-btn">Set Questions</button>
                 </div>
 
+                <div class="dashboard-card exam2026" onclick="start2026Session()">
+                    <div class="card-icon">📝</div>
+                    <h3>2026 Exam Questions</h3>
+                    <p>Practice only the official 2026 exam questions</p>
+                    <button class="card-btn">Start 2026 Test</button>
+                </div>
+
                 <div class="dashboard-card tertiary" onclick="showHistory()">
                     <div class="card-icon">📊</div>
                     <h3>Session History</h3>
@@ -514,6 +521,37 @@ function confirmCustomTest() {
     }
 
     beginSession(n);
+}
+
+function start2026Session() {
+    const savedUserName = localStorage.getItem('aiQuizUserName');
+    if (!savedUserName) {
+        showUserNameDialog();
+        return;
+    }
+
+    const questions2026 = window.questions.filter(q => q.year === 2026);
+    if (questions2026.length === 0) {
+        notificationManager.error('No 2026 exam questions found.');
+        return;
+    }
+
+    currentQuestion = 0;
+    correctAnswers = 0;
+    wrongAnswers = 0;
+    selectedAnswers = [];
+    incorrectQuestions = [];
+    sessionStartTime = Date.now();
+    isReviewMode = false;
+
+    currentQuestions = QuizUtils.shuffleArray([...questions2026]);
+
+    DOMUtils.showView('quiz');
+    DOMUtils.setText('sessionTime', new Date().toLocaleTimeString());
+    startTimer();
+    displayQuestion();
+    updateStats();
+    notificationManager.success(`2026 Exam Mode started! ${currentQuestions.length} questions. Good luck!`);
 }
 
 function showHistory() {
@@ -1348,6 +1386,7 @@ window.startNewSession = startNewSession;
 window.startReviewSession = startReviewSession;
 window.showCustomTestDialog = showCustomTestDialog;
 window.confirmCustomTest = confirmCustomTest;
+window.start2026Session = start2026Session;
 window.showHistory = showHistory;
 window.hideHistory = hideHistory;
 window.submitAnswer = submitAnswer;
