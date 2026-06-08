@@ -1080,6 +1080,17 @@ function displayQuestion() {
     submitBtn.textContent = 'Submit Answer';
 
     selectedAnswers = [];
+
+    // Render any LaTeX in the question and answers
+    if (typeof renderMathInElement === 'function') {
+        renderMathInElement(document.getElementById('quiz-container'), {
+            delimiters: [
+                { left: '$$', right: '$$', display: true },
+                { left: '$', right: '$', display: false }
+            ],
+            throwOnError: false
+        });
+    }
 }
 
 function selectAnswer(index, answerElement) {
